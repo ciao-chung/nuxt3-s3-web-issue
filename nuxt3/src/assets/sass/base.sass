@@ -1,0 +1,64 @@
+@use 'assets/sass/variable.sass' as *
+@use 'assets/sass/utils.sass' as * 
+@use 'assets/sass/notify.sass'
+@use 'sass:color'
+
+$body-font-family: "Noto Sans TC", sans-serif
+
+*
+  @include scrollbar
+
+body
+  margin: 0
+  padding: 0
+
+*[eagle="app-root"]
+  background-color: $app-color-background
+  *
+    text-transform: none !important
+  .bg-main
+    @include background-linear-gradient-secondary()
+    color: $app-color-white
+  .v-app-bar.bg-main
+    background-image: linear-gradient(90deg, color.scale(#13547a, $lightness: 0%), color.scale(#80d0c7, $lightness: -10%))
+    color: $app-color-white
+
+  *[eagle-layout]
+    *[eagle="sidebar"]
+      position: fixed !important
+    .link
+      color: $app-color-blue
+
+  .v-icon
+    font-size: 1rem
+    font-weight: 700
+
+  a
+    color: color.scale($app-color-blue, $lightness: 20%)
+
+  b
+    font-weight: 600
+
+div.mx-datepicker-main.mx-datepicker-popup
+  z-index: $z-index-datepicker-popup
+  
+.cursor-pointer
+  cursor: pointer
+
+.grecaptcha-badge
+  z-index: $z-index-recaptcha-badge
+
+
+.v-input.v-checkbox
+  &>.v-input__control
+    width: fit-content
+
+.primary--text, .text-primary
+  color: $app-color-primary !important
+
+.app-background
+  @include background-linear-gradient-primary()
+
+div[eagle-popup="content"]
+  iframe
+    max-width: 100%

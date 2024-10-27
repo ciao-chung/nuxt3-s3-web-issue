@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  eagle_web:
+    container_name: 'eagle-app-web'
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    tty: true
+    working_dir: /site/web
+    user: node
+    network_mode: host
+    ports:
+      - "${DOCKER_WEB_PORT:-8888}:8888"
+    volumes:
+      - .:/site/web

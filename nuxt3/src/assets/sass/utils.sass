@@ -1,0 +1,22 @@
+@use './variable.sass'
+@use 'sass:color'
+
+//ref: https://webgradients.com/
+@mixin background-linear-gradient-primary
+  background-image: linear-gradient(180deg, #13547a, color.scale(#80d0c7, $lightness: -15%))
+
+
+@mixin background-linear-gradient-secondary
+  background-image: linear-gradient(135deg, color.scale(#13547a, $lightness: 15%), #80d0c7)
+
+
+@mixin scrollbar($size: 8px, $primary-color: #5a7582, $secondary-color: #90A4AE)
+  &::-webkit-scrollbar
+    width: $size
+    height: $size
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background: $primary-color
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    background: $secondary-color
