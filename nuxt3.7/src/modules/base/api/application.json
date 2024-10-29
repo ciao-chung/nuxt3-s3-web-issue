@@ -1,0 +1,9 @@
+{
+  "name": "Ciao's Profile",
+  "version": "v1.0.0",
+  "webHost": "http://localhost:8888",
+  "locale": {
+    "defaultLocale": "zh-TW",
+    "defaultTimeZone": "Asia/Taipei"
+  }
+}

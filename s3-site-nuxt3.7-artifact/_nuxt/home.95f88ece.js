@@ -1,0 +1,1 @@
+import{_ as e}from"./entry.5b7e79fe.js";import{S as o,O as r}from"./vuetify.7affcc24.js";import"./lodash.6114c6d4.js";const t={};function c(n,m){return r(),o("div",null," home ")}const f=e(t,[["render",c]]);export{f as default};
